@@ -1,0 +1,75 @@
+<DOCTYPYE html>
+<html lang="en">
+<head>
+    <title>SongLyrically</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-sacel=1">
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .header {
+        background-color:white;
+        padding: 20px;
+        text-align: center;
+        font-size: 27px;
+    }
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px;
+}
+
+.column.side {
+    width: 25%;
+}
+.column.middle {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 5px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+    </style>
+    </head>
+    <body>
+    <p>Where All The Magic Begins</p>
+
+    <div class="header">
+        <h2>SongLyrically</h2>
+        <p>In this website you can easliy find your favourite songs with lyrics and translation!</p>
+        <p>Sit back, relax.</p>
+
+        <div class="footer">
+            
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    
+    </body>
+</html>
+
+
+// Maybe have a copyright at the footer in small print?
+
+//Might have to change the layout later, to make it look different//
+
