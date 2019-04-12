@@ -1,0 +1,141 @@
+body { 
+  background-image: url("electronauts1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+}
+
+.header {
+  background-color:"";
+  padding: -5px;
+h1 {
+  width: 100%;
+  background: khaki;
+  font-weight: bold;
+  color: maroon;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Megrim', cursive;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+form {
+  text-align: center;
+  font-size: 35px;
+  color: cyan;
+  font-family: 'Copse', serif;
+}
+
+.column {
+float: left;
+padding: 15px;
+height: 300px;
+}
+
+.column.side {
+width: 25%;
+}
+.column.middle {
+width: 20%;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.footer {
+font-size: 12px;
+padding: 100px;
+text-align: right;
+form input, select {
+  margin-top: 5px;
+}
+
+#original-lyrics-display {
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: auto;
+  margin-bottom: 30px;
+  padding: 15px;
+  text-align: center;
+  line-height: 3;
+  background: lightskyblue;
+  font-weight: bold;
+  width: 500px;
+  font-family: 'Andika', sans-serif;
+}
+
+#translated-lyrics-display {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding: 15px;
+  text-align: center;
+  line-height: 3;
+  background: lightgreen;
+  font-weight: bold;
+  width: 500px;
+  font-family: 'Andika', sans-serif;
+}
+
+#song-name-display {
+  margin: 30px auto;
+  text-align: center;
+  line-height: 2;
+  background: maroon;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+  font-family: 'Andika', sans-serif;
+}
+
+#language-display {
+  margin: 30px auto;
+  text-align: center;
+  line-height: 2;
+  background: darkgreen;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  font-family: 'Andika', sans-serif;
+}
+
+#videos-display {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+.column.side, .column.middle {
+  width: 100%;
+}
+}
+
+p {
+font-style: bold;
+}
+
+p {
+font-style: italic;
+font-size: 24px;
+color: cyan;
+}
+
+<p style="color:white; font-family:Dancing Script', cursive;">Where The Magic Begins~</p>
+        
+        <pre>
+            <p style="font-size:20px; color: magenta;">In this webiste, you will be able to search up a music by typing in the song title and artist.<br>You can also search the lyrics in a different language!!<br><br>Once you have everthing set, you can click the submit button and the music video will appear.<br></p>
+        </pre>
+
+        <pre>
+        <p style="font-size:35px; color: gold; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">So sit back, relax and move to the beat!</p>
+        </pre>
+
+p.small {
+      font-variant: small-caps;
