@@ -198,6 +198,7 @@ comment.on('child_added', (childSnapshot) => {
   const commentText = $('<p>');
   commentText.addClass('card-text');
 
+  commentText.css('border-bottom', '1px #888 solid');
   commentName.text(newNameCard);
   commentText.text(newUserComment);
 
