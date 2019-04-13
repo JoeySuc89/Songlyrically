@@ -6,7 +6,8 @@
   <title>Songlyrically</title>
   <meta name="description" content="Project 1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Andika|Megrim|Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Andika|Megrim|Permanent+Marker|Devonshire|Kaushan+Script|Pacifico|Arvo"
+    rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./static/css/style.css">
@@ -23,82 +24,90 @@
   </div>
   <div class="container">
 
+
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="col-12">
         <form id="song-search-form">
-          <h2>song search</h2>
-          Song Title:
-          <input type="text" id="song-title-input">
-          <br>
-          Song Artist:
-          <input type="text" id="song-artist-input">
-          <br>
-          Language:
-          <select id="language-input">
-            <option value="en-sq">Albanian</option>
-            <option value="en-ar">Arabic</option>
-            <option value="en-bn">Bengali</option>
-            <option value="en-zh">Chinese</option>
-            <option value="en-fr">French</option>
-            <option value="en-de">German</option>
-            <option value="en-it">Italian</option>
-            <option value="en-ja">Jananese</option>
-            <option value="en-ko">Korean</option>
-            <option value="en-lo">Laotian</option>
-            <option value="en-la">Latin</option>
-            <option value="en-lv">Latvian</option>
-            <option value="en-mt">Maltese</option>
-            <option value="en-mn">Mongolian</option>
-            <option value="en-ne">Nepali</option>
-            <option value="en-fa">Perian</option>
-            <option value="en-lo">Portuguese</option>
-            <option value="en-ro">Romanian</option>
-            <option value="en-ru">Russian</option>
-            <option value="en-sr">Serbian</option>
-            <option value="en-es">Spanish</option>
-            <option value="en-sw">Swahili</option>
-            <option value="en-uk">Ukrainian</option>
-            <option value="en-uz">Uzbek</option>
-          </select>
-          <br>
-          <input id="submit-button" type="submit" value="Submit">
+          <h2>choose a song and translation language...</h2>
+          <div class="form-row">
+            <div class="col">
+              <input type="text" id="song-title-input" class="form-control" placeholder="Song title">
+            </div>
+            <div class="col">
+              <input type="text" id="song-artist-input" class="form-control" placeholder="Artist">
+            </div>
+            <div class="form-group col-md-4">
+              <select id="language-input" class="form-control">
+                <option value=null>Language</option>
+                <option value="en-sq">Albanian</option>
+                <option value="en-ar">Arabic</option>
+                <option value="en-bn">Bengali</option>
+                <option value="en-zh">Chinese</option>
+                <option value="en-fr">French</option>
+                <option value="en-de">German</option>
+                <option value="en-it">Italian</option>
+                <option value="en-ja">Jananese</option>
+                <option value="en-ko">Korean</option>
+                <option value="en-lo">Laotian</option>
+                <option value="en-la">Latin</option>
+                <option value="en-lv">Latvian</option>
+                <option value="en-mt">Maltese</option>
+                <option value="en-mn">Mongolian</option>
+                <option value="en-ne">Nepali</option>
+                <option value="en-fa">Perian</option>
+                <option value="en-lo">Portuguese</option>
+                <option value="en-ro">Romanian</option>
+                <option value="en-ru">Russian</option>
+                <option value="en-sr">Serbian</option>
+                <option value="en-es">Spanish</option>
+                <option value="en-sw">Swahili</option>
+                <option value="en-uk">Ukrainian</option>
+                <option value="en-uz">Uzbek</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <button id="submit-button" type="submit" class="btn btn-primary mb-2">go</button>
+            </div>
+          </div>
         </form>
       </div>
+    </div>
 
-
-      <div class="col-sm-12 col-md-6 col-lg-6">
+    <div class="row">
+      <div class="col-sm-12 col-md-5 col-lg-5">
         <div id="last-song-div">
-          <h2>last song searched</h2>
+          <h2>what others are listening to...</h2>
           <div id="last-song"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7 col-lg-7">
+        <div id="instructions">
+          <h2>about songlyrically...</h2>
+          <p>Songlyrically is an easy to use song search and lyric translation app! Simply search for a song using the
+            form above, then scroll down to watch the video, listen, and view the lyrics and the translation.</p>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-6">
-          <form class="cmxform" id="commentForm" method="get" action="">
-              <fieldset>
-                <h2>leave a comment!</h2>
-                <p>
-                  <label for="cname">Name</label>
-                  <input id="cname" name="name" minlength="2" type="text" required>
-                </p>
-                <p>
-                  <label for="cemail">E-Mail</label>
-                  <input id="cemail" type="email" name="email" required>
-                </p>
-                <p>
-                  <label for="ccomment">Comment</label>
-                  <textarea id="ccomment" name="comment" maxlength="200" required></textarea>
-                </p>
-                <p>
-                  <input class="submit" id="submitBtn" type="submit" value="Submit">
-                </p>
-              </fieldset>
-            </form>
+      <div class="col-sm-12 col-md-7 col-lg-7 clearfix">
+        <form class="cmxform" id="commentForm" method="get" action="">
+          <fieldset>
+            <h2>leave a comment!</h2>
+            <input class="form-control form-control-lg" minLength="2" name="name" id="cname" type="text" placeholder="Name"
+              required>
+            <input class="form-control form-control-lg" minLength="2" name="email" id="cemail" type="email" placeholder="Email"
+              required>
+            <textarea id="ccomment" name="comment" maxlength="200" placeholder="Comment" required></textarea>
+            </p>
+            <p>
+              <button id="submitBtn" type="submit" class="btn btn-primary mb-2">go</button>
+            </p>
+          </fieldset>
+        </form>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="col-sm-12 col-md-5 col-lg-5">
         <div id="comment-log">
-          <h2>comment log</h2>
+          <h2>what they are saying...</h2>
           <div class="card text-center" id="card-text-center"></div>
         </div>
       </div>
@@ -117,12 +126,23 @@
     <div class="row">
       <div class="col-sm-6">
         <div id="original-lyrics-display"></div>
+    <div id="results-display">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="song-name-display"></div>
+          <div id="language-display"></div>
+          <div id="videos-display"></div>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <div id="translated-lyrics-display"></div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div id="original-lyrics-display"></div>
+        </div>
+        <div class="col-sm-6">
+          <div id="translated-lyrics-display"></div>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
