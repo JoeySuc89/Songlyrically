@@ -14,12 +14,6 @@ const comment = firebase.database().ref('/Comments');
 $('#results-display').hide();
 
 database.ref('/songs').on('value', (snapshot) => {
-
-database.ref ().on ('value', snapshot => {
-  const lastSong = snapshot.val ().lastSong
-  $ ('#last-song').html (`Last song played:  <p id="last-song-p">${lastSong}</p>`);
-
-database.ref().on('value', (snapshot) => {
   $('#last-song').text(snapshot.val().lastSong);
 });
 
@@ -114,14 +108,10 @@ function songInfoSearch(song, artist) {
       trackId = response.message.body.track_list[0].track.track_id;
       $('#song-name-display').append(songDiv);
 
-
       database.ref('/songs').set({
-
-      $('#original-lyrics-display').html('<p class="lyrics-headers">Original Lyrics:</p>' `${lyrics}`) {
-
         lastSong: response.message.body.track_list[0].track.track_name,
+      });
 
-      }
       lyricsSearch(trackId);
     },
   });
