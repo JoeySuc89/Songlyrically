@@ -54,7 +54,7 @@ function translateLyrics(originalLyrics) {
       `Translated Lyrics:<br> ${response.text}`,
     );
 
-    $('#results-display').show()
+    $('#results-display').show();
   });
 }
 
@@ -163,7 +163,7 @@ $('#submitBtn').on('click', (event) => {
 
   for (let i = 0; i < object.length; i += 1) {
     if (object[i].value.length === 0) {
-      object[i].jQ.css('background', 'red').val(object[i].message).css('color', 'white');
+      object[i].jQ.css('background', 'red').css('color', 'white');
     }
   }
 
