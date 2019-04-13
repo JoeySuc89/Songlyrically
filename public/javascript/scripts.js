@@ -11,8 +11,7 @@ const config = {
 firebase.initializeApp(config);
 const database = firebase.database();
 const comment = firebase.database().ref('/Comments');
-$('#original-lyrics-display').hide();
-$('#translated-lyrics-display').hide();
+$('#results-display').hide();
 
 database.ref('/songs').on('value', (snapshot) => {
 
@@ -22,7 +21,6 @@ database.ref ().on ('value', snapshot => {
 
 database.ref().on('value', (snapshot) => {
   $('#last-song').text(snapshot.val().lastSong);
-
 });
 
 
@@ -62,8 +60,7 @@ function translateLyrics(originalLyrics) {
       `Translated Lyrics:<br> ${response.text}`,
     );
 
-    $('#original-lyrics-display').show();
-    $('#translated-lyrics-display').show();
+    $('#results-display').show()
   });
 }
 
@@ -117,37 +114,22 @@ function songInfoSearch(song, artist) {
       trackId = response.message.body.track_list[0].track.track_id;
       $('#song-name-display').append(songDiv);
 
-<<<<<<< HEAD
+
       database.ref('/songs').set({
-=======
 
-      $ ('#original-lyrics-display').html (`<p class="lyrics-headers">Original Lyrics:</p> ${lyrics}`);
+      $('#original-lyrics-display').html('<p class="lyrics-headers">Original Lyrics:</p>' `${lyrics}`) {
 
-      database.ref().set({
->>>>>>> d6faa7bc027c44f37aa8f78ba5d076bd8b2ecad2
         lastSong: response.message.body.track_list[0].track.track_name,
-      });
 
-
+      }
       lyricsSearch(trackId);
     },
   });
 }
 
 
-
-  $.ajax ({
-    url: yandexQueryURL,
-    method: 'GET',
-  }).then (response => {
-    $ ('#language-display').text (`Language: ${translateLang}`);
-    $ ('#translated-lyrics-display').html (
-      `<p class="lyrics-headers">Translated Lyrics:</p> ${response.text}`
-    );
-
 $('#submit-button').on('click', (event) => {
   event.preventDefault();
-
 
   const songQuery = $('#song-title-input').val().trim();
   const artistQuery = $('#song-artist-input').val().trim();
