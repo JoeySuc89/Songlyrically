@@ -6,7 +6,13 @@ While doing your search, choose a different language to view those lyrics in bot
 
 Just do us a favor! Enter your name, email address and leave us a comment about our app!
 
-Enjoy!!!
+Enjoy!
+
+APIs Used:
+
+Youtube API for videos
+MusixMatch API for song info and lyrics
+Yandex API for translation
 
 You can view our app at:
 
